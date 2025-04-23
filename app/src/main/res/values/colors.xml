@@ -5,4 +5,6 @@
     <color name="primary_green">#00BB05</color>
     <color name="darker_green">#2EFFA5</color>
     <color name="background_green">#BADCFF</color>
+    <color name="best_tip">#00FF2E</color>
+    <color name="worst_tip">#FE0D01</color>
 </resources>
