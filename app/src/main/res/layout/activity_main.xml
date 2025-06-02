@@ -27,18 +27,19 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipTotalLabel"
         tools:text="24%" />
 
     <TextView
         android:id="@+id/tvTipLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
+        android:layout_marginLeft="150dp"
         android:text="Tip"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvTipPercentLabel" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipTotalLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvTipTotalLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvTipTotalLabel" />
 
     <TextView
         android:id="@+id/tvTipTotalLabel"
@@ -48,7 +49,7 @@
         android:text="Total"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="@id/tvBaseLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvTipLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/tvBaseLabel" />
 
     <!--    Views on right Side-->
     <EditText
@@ -77,9 +78,10 @@
         android:id="@+id/tvTipAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvTipLabel"
-        app:layout_constraintStart_toStartOf="@+id/seekBarTip"
+        app:layout_constraintStart_toEndOf="@+id/tvTipLabel"
         app:layout_constraintTop_toTopOf="@+id/tvTipLabel"
         tools:text="19.96" />
 
@@ -87,9 +89,10 @@
         android:id="@+id/tvTotalAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvTipTotalLabel"
-        app:layout_constraintStart_toStartOf="@+id/tvTipAmount"
+        app:layout_constraintStart_toEndOf="@+id/tvTipTotalLabel"
         app:layout_constraintTop_toTopOf="@+id/tvTipTotalLabel"
         tools:text="103.11" />
 
@@ -114,7 +117,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/seekBarTip"
         app:layout_constraintStart_toStartOf="@+id/seekBarTip"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarTip"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipTotalLabel"
         tools:text="Acceptable" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
